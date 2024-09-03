@@ -1,113 +1,146 @@
+"use client";
+import React from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
+import Link from "next/link";
+import { motion } from "framer-motion";
 import Image from "next/image";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
-export default function Home() {
+const HomePage = () => {
+  const BannerInicio = [
+    {
+      imagen: "/Slider/banneer1.jpg",
+    },
+  ];
+
+  // Variantes de animación para fade-in
+  const fadeInVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
+  const Servicios = [
+    {
+      id: 1,
+      titulo: "¡Atención jóvenes!",
+      descripcion:
+        "Aprende a manejar tu dinero de manera inteligente con nuestras charlas-taller de educación financiera",
+      imagen: "/CardsImages/joventud.webp",
+    },
+    {
+      id: 2,
+      titulo: "¡Mejora tus habilidades!",
+      descripcion:
+        "Aumenta tu valor en el mercado laboral con nuestras capacitaciones",
+      imagen: "/CardsImages/habilidad.webp",
+    },
+    {
+      id: 3,
+      titulo: "¡Transforma tu vida!",
+      descripcion: "Con nuestras capacitaciones de desarrollo personal",
+      imagen: "/CardsImages/mejoraVida.webp",
+    },
+    {
+      id: 4,
+      titulo: "Charlas Institucionales",
+      descripcion:
+        "Divulgar la educación financiera entre los jóvenes en el sistema educativo es crucial para empoderarlos con habilidades financieras y prepararlos para un futuro económico sólido.",
+      imagen: "/CardsImages/Charlas.webp",
+    },
+    {
+      id: 5,
+      titulo: "Conferencias (Virtual/Presencial)",
+      descripcion:
+        "Empodera a tus estudiantes con educación financiera. Ofrecemos charlas para que adquieran las herramientas clave para un futuro financiero exitoso. ¡Contáctanos para llevar esta experiencia a tu institución!",
+      imagen: "/CardsImages/VirtualPresencial.webp",
+    },
+  ];
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+    <div className="-mt-[72px] md:-mt-[98.55px] lg:-mt-[98.55px] bg-gray-50">
+      <Carousel infiniteLoop autoPlay showThumbs={false} showStatus={false}>
+        {BannerInicio?.map((banner, index) => (
+          <div key={index} className="relative w-full h-[21rem] sm:h-screen">
+            <img
+              src={banner.imagen}
+              className="h-full w-full object-cover overflow-hidden"
+              alt={`slider ${index}`}
             />
-          </a>
+
+            <motion.div
+              className="absolute top-0 left-0 w-full h-full text-white bg-black/40"
+              initial="hidden"
+              animate="visible"
+              variants={fadeInVariants}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="flex justify-start items-center max-w-[883px] h-full pl-2 sm:text-3xl sm:pl-20">
+                <div className="max-w-[40rem] space-y-1 sm:space-y-4">
+                  <motion.section
+                    className="sm:p-2 font-bold bg-white text-black border border-Secundario text-xl uppercase rounded-3xl rounded-br-none rounded-tl-none outline-none shadow-lg hover:shadow-xl hover:opacity-90 duration-200 w-[10.5rem]"
+                    initial="hidden"
+                    animate="visible"
+                    variants={fadeInVariants}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                  >
+                    Aprender
+                  </motion.section>
+                  <motion.p
+                    className="text-start text-base sm:text-4xl font-extrabold"
+                    initial="hidden"
+                    animate="visible"
+                    variants={fadeInVariants}
+                    transition={{ duration: 0.8, delay: 0.4 }}
+                  >
+                    A manejar tu{" "}
+                    <span className="text-Secundario uppercase"> Dinero </span>
+                  </motion.p>
+
+                  <Link href={"/QuienesSomos"} className="flex justify-start">
+                    <motion.div
+                      className="group font-medium tracking-wide select-none text-base relative inline-flex items-center justify-start cursor-pointer sm:h-12 border-2 border-solid py-0 px-6 rounded-md overflow-hidden z-10 transition-all duration-300 ease-in-out outline-0 bg-transparent text-white border-Secundario hover:text-black hover:bg-Tercieario"
+                      initial="hidden"
+                      animate="visible"
+                      variants={fadeInVariants}
+                      transition={{ duration: 0.8, delay: 0.6 }}
+                    >
+                      <strong className="font-bold uppercase">
+                        Quienes Somos
+                      </strong>
+                      <span className="absolute bg-Secundario bottom-0 w-0 left-1/2 h-full -translate-x-1/2 transition-all ease-in-out duration-300 group-hover:w-[105%] -z-[1] group-focus:w-[105%]" />
+                    </motion.div>
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        ))}
+      </Carousel>
+
+      <div className="flex-grow">
+        <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 sm:gap-2 lg:grid-cols-3 mt-4 px-4 py-8 md:gap-8 bg-gray-50 rounded-md">
+          {Servicios.map((servicio) => (
+            <div key={servicio?.id}>
+              <Card className="mt-7 w-full mx-auto h-[92%] hover:-translate-y-2 shadow-lg  ">
+                <CardHeader className="h-72 -mt-12 rounded-md overflow-hidden  ">
+                  <img
+                    src={servicio.imagen}
+                    className="h-full w-full object-cover aspect-square rounded-md shadow-md bg-[#e3e3e3] overflow-hidden"
+                    alt={servicio?.titulo}
+                  />
+                </CardHeader>
+                <CardContent>
+                  <h1 className="mb-2 font-semibold">{servicio?.titulo}</h1>
+                  <p className="text-gray-700">{servicio?.descripcion}</p>
+                </CardContent>
+              </Card>
+            </div>
+          ))}
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   );
-}
+};
+
+export default HomePage;
