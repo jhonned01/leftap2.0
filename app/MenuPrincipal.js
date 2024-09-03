@@ -47,7 +47,7 @@ const MenuPrincipal = () => {
     <>
       <nav
         style={{ filter: "drop-shadow(0px 0px 3px black)" }}
-        className={`sticky z-50 top-0 p-2 md:px-10 shadow-sm md:flex md:items-center md:justify-between    ${scrollBg}  `}
+        className={`sticky z-50 top-0 p-2 md:px-10 shadow-sm md:flex md:items-center md:justify-between  text-white   ${scrollBg}  `}
       >
         <div className="flex justify-between items-center   ">
           {/* Escudo Logo "inicio" */}
