@@ -72,12 +72,12 @@ const Servicios = () => {
                 <section className=" w-full h-full">
                   <figure className="relative w-full h-[200px] md:h-[300px] lg:h-[500px] ">
                     <Image
-                      src={"/Marina2.webp"}
+                      src={"/leftap.jpg"}
                       alt="Foto"
                       fill
                       style={{
                         objectFit: "cover",
-                        objectPosition: "top",
+                        objectPosition: "center",
                       }}
                       className="rounded-md aspect-auto"
                     />

@@ -8,7 +8,7 @@ import { BsInstagram, BsTiktok, BsWhatsapp } from "react-icons/bs";
 const Footer = () => {
   return (
     <>
-      <div className="border-t   py-6 px-4 lg:px-0 bg-white   text-black">
+      <div className="border-t   py-6 px-4 lg:px-0 bg-gray-50   text-black">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 justify-center gap-4 items-center sm:items-start">
           <Link href={"/"}>
             <div className="flex flex-col justify-center items-center">

@@ -25,7 +25,7 @@ const MenuPrincipal = () => {
       const isElementVisible = window.scrollY > 40;
 
       if (isElementVisible) {
-        setScrollBg("bg-white/80 backdrop-blur-md  text-black");
+        setScrollBg("bg-white/20 backdrop-blur-md  text-black");
       } else {
         setScrollBg("   lg:bg-transparent text-white");
       }

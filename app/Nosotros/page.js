@@ -1,5 +1,4 @@
 "use client";
-
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -94,7 +93,7 @@ const Nosotros = () => {
             >
               <Image
                 className="w-full rounded-md aspect-square object-cover"
-                src="/Presentaciones/Nosotros1.jpg"
+                src="/NuevaLeft.webp"
                 alt="header image"
                 layout="responsive" // Usa la opción de diseño adecuado
                 width={1200} // Establece el ancho según sea necesario

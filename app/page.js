@@ -4,7 +4,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 const HomePage = () => {
@@ -118,15 +117,15 @@ const HomePage = () => {
         ))}
       </Carousel>
 
-      <div className="flex-grow">
-        <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 sm:gap-2 lg:grid-cols-3 mt-4 px-4 py-8 md:gap-8 bg-gray-50 rounded-md">
+      <div className="container  ">
+        <div className=" mx-auto grid grid-cols-1 sm:grid-cols-2 sm:gap-2 lg:grid-cols-3 mt-4 px-4 py-8 md:gap-8 rounded-md">
           {Servicios.map((servicio) => (
             <div key={servicio?.id}>
-              <Card className="mt-7 w-full mx-auto h-[92%] hover:-translate-y-2 shadow-lg  ">
+              <Card className="mt-7 w-full mx-auto h-[92%] hover:-translate-y-2 shadow-lg border-2 ">
                 <CardHeader className="h-72 -mt-12 rounded-md overflow-hidden  ">
                   <img
                     src={servicio.imagen}
-                    className="h-full w-full object-cover aspect-square rounded-md shadow-md bg-[#e3e3e3] overflow-hidden"
+                    className="h-full w-full object-cover aspect-square rounded-md shadow-md bg-white overflow-hidden"
                     alt={servicio?.titulo}
                   />
                 </CardHeader>
