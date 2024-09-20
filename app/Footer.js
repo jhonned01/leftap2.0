@@ -1,9 +1,9 @@
 "use client";
-import { Facebook, Linkedin, Youtube } from "lucide-react";
+import { Facebook } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { BsFacebook, BsInstagram, BsTiktok, BsWhatsapp } from "react-icons/bs";
+import { BsInstagram, BsTiktok, BsWhatsapp } from "react-icons/bs";
 
 const Footer = () => {
   return (
