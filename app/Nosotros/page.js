@@ -18,21 +18,21 @@ const Nosotros = () => {
       title: "VISIÓN",
       icon: "/Nosotros/Vision.png",
       description:
-        "Aspiramos a ser un referente en la educación financiera y el desarrollo personal, creando una sociedad donde cada individuo tenga la capacidad de alcanzar su máximo potencial económico. Queremos fomentar una nueva generación de emprendedores seguros y capacitados, que contribuyan al crecimiento sostenible de sus comunidades.",
+        "Aspiramos a un mundo donde la educación financiera sea accesible para todos, formando docentes como agentes de cambio y jóvenes como emprendedores conscientes. Buscamos ser referentes globales, promoviendo una cultura financiera que fomente el bienestar colectivo, la sostenibilidad y las oportunidades equitativas.",
     },
     {
       id: 3,
       title: "OBJETIVOS",
       icon: "/Nosotros/Objetivos.png",
       description:
-        "Proporcionar educación financiera de calidad que permita a los emprendedores tomar decisiones informadas y estratégicas, ofreciendo apoyo continuo en el desarrollo y expansión de emprendimientos, desde la planificación hasta la implementación de estrategias digitales. Inculcamos la importancia del emprendedorismo y la educación financiera en las nuevas generaciones a través de charlas y capacitaciones en escuelas. Además, ayudamos a nuestros clientes a transformar sus hábitos financieros y desarrollar una relación sana y efectiva con el dinero, facilitando el acceso a herramientas digitales y estrategias de negocio que impulsen el crecimiento y éxito de los emprendimientos.",
+        "Nos enfocamos en capacitar docentes en educación financiera y empoderar a jóvenes emprendedores. Ofrecemos conferencias, talleres, programas específicos, recursos innovadores y apoyo continuo para mejorar sus competencias. Colaboramos con instituciones educativas para integrar esta formación en los planos escolares. Para jóvenes, brindamos programas de finanzas personales, mentoría, recursos financieros y eventos empresariales, ayudándolos a desarrollar habilidades sólidas que impulsan su éxito.",
     },
     {
       id: 4,
       title: "VALORES",
       icon: "/Nosotros/Valores.png",
       description:
-        "En LEFTAP, creemos firmemente en el poder del conocimiento para transformar vidas y generar libertad financiera. Nuestra innovación constante nos permite adoptar nuevas ideas y tecnologías que impulsan el crecimiento personal y profesional. Nos comprometemos a acompañar a nuestros clientes en cada etapa de su emprendimiento, ofreciendo apoyo constante y personalizado. Valoramos profundamente la educación financiera como base para el desarrollo económico sostenible. Actuamos con integridad, manteniendo la honestidad y transparencia en todas nuestras acciones, construyendo relaciones de confianza con nuestros clientes y socios.",
+        "Creemos firmemente en el poder del conocimiento para transformar vidas y generar libertad financiera. Nuestra innovación constante nos permite adoptar nuevas ideas y tecnologías que impulsan el crecimiento personal y profesional. Nos comprometemos a acompañar a nuestros clientes en cada etapa de su emprendimiento, ofreciendo apoyo constante y personalizado. Valoramos profundamente la educación financiera como base para el desarrollo económico sostenible. Actuamos con integridad, manteniendo la honestidad y transparencia en todas nuestras acciones, construyendo relaciones de confianza con nuestros clientes y socios.",
     },
   ];
 
@@ -56,31 +56,40 @@ const Nosotros = () => {
               transition={{ duration: 0.6, ease: "easeOut" }}
               variants={sectionVariants}
             >
-              <h1 className="text-xl font-extrabold leading-tight lg:text-2xl text-gray-900 uppercase">
+              <h1 className="text-xl font-extrabold leading-9 lg:text-2xl text-black uppercase">
                 LEFTAP
               </h1>
+
               <p>
-                Somos una empresa digital dedicada a guiar a quienes buscan su
-                libertad financiera a través del emprendedorismo y la educación
-                financiera. Acompañamos a jóvenes y emprendedores en su
-                crecimiento personal y financiero, ayudándoles a superar
-                barreras y avanzar con confianza hacia sus metas.
+                s un centro de capacitación y formación digital que busca
+                transformar la educación financiera en la sociedad, enfocándose
+                en la capacitación de docentes, el empoderamiento de jóvenes
+                emprendedores y la promoción de un cambio positivo en el sistema
+                educativo.
               </p>
               <p>
-                Ofrecemos apoyo continuo en cada etapa de tu emprendimiento,
-                desde la organización de tu empresa hasta la implementación de
-                estrategias de ventas y marketing digital. Además, realizamos
-                charlas gratuitas en escuelas secundarias para sembrar las
-                semillas del cambio en futuras generaciones.
+                Surgimos ante la necesidad de abordar la brecha en educación
+                financiera y el alto índice de fracaso en emprendimientos. Nos
+                preguntamos: ¿Por qué no aprendimos a generar más dinero desde
+                edades tempranas? ¿Cómo puedo como docente ayudar a jóvenes para
+                cambiar la historia de sus vidas incorporando educación
+                financiera? ¿Por qué el 80% de los emprendedores fracasan en los
+                primeros 5 años? Estas preguntas fueron el motor que impulsó la
+                creación de LEFTAP.
               </p>
               <p>
-                Creemos que el crecimiento de una sociedad depende de la
-                educación financiera y el desarrollo personal. A través de
-                cursos y capacitaciones prácticas, proporcionamos el
-                conocimiento necesario para que avances en tu proyecto y logres
-                la seguridad financiera que deseas. En LEFTAP, te ayudamos a
-                desaprender viejos hábitos y adquirir nuevas habilidades para
-                construir un futuro próspero.
+                Nuestra misión es capacitar a docentes, jóvenes y emprendedores
+                en educación financiera para que tomen decisiones informadas y
+                alcancen su máximo potencial económico. Buscamos convertirnos en
+                un referente global en educación financiera, transformando
+                vidas, comunidades y sociedades a través de la enseñanza de
+                habilidades financieras.
+              </p>
+
+              <p>
+                Para lograr nuestra misión, hemos establecido dos objetivos
+                principales: la capacitación integral de docentes en educación
+                financiera y el empoderamiento de jóvenes emprendedores.
               </p>
             </motion.div>
             <motion.div

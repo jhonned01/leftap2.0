@@ -19,39 +19,49 @@ const HomePage = () => {
     visible: { opacity: 1 },
   };
 
+  // "Aprende a manejar tu dinero y construye un futuro próspero con nuestras charlas-taller de educación financiera.",
+
   const Servicios = [
     {
       id: 1,
       titulo: "¡Atención jóvenes!",
       descripcion:
-        "Aprende a manejar tu dinero de manera inteligente con nuestras charlas-taller de educación financiera",
+        "Aprende a manejar tu dinero de forma inteligente, mejora tus finanzas personales y recibe orientación vocacional para construir un futuro próspero.",
       imagen: "/CardsImages/joventud.webp",
     },
     {
       id: 2,
       titulo: "¡Mejora tus habilidades!",
       descripcion:
-        "Aumenta tu valor en el mercado laboral con nuestras capacitaciones",
+        "Descubre cómo fortalecer tus habilidades, mejorar tu confianza y alcanzar tus metas profesionales e impulsa tu crecimiento combinando herramientas prácticas y coaching en desarrollo personal.",
       imagen: "/CardsImages/habilidad.webp",
     },
     {
       id: 3,
       titulo: "¡Transforma tu vida!",
-      descripcion: "Con nuestras capacitaciones de desarrollo personal",
-      imagen: "/CardsImages/mejoraVida.webp",
-    },
-    {
-      id: 4,
-      titulo: "Charlas Institucionales",
       descripcion:
-        "Divulgar la educación financiera entre los jóvenes en el sistema educativo es crucial para empoderarlos con habilidades financieras y prepararlos para un futuro económico sólido.",
-      imagen: "/CardsImages/Charlas.webp",
+        "Impulsa tu crecimiento con nuestras capacitaciones en desarrollo personal, respaldadas por libros y manuales especializados en finanzas personales. fortaleces tus habilidades para alcanzar una vida plena y financieramente estable.",
+      imagen: "/CardsImages/Finanzas.jpg",
     },
     {
       id: 5,
+      titulo: "Finanzas Personales",
+      descripcion:
+        "Descubre cómo gestionar tus ingresos, ahorrar para el futuro y alcanzar tus metas financieras con nuestras herramientas prácticas y estrategias efectivas.",
+      imagen: "/CardsImages/Finanzas.jpg",
+    },
+    {
+      id: 6,
+      titulo: "Charlas Institucionales",
+      descripcion:
+        "Nuestras capacitaciones están diseñadas para docentes, brindándoles las herramientas necesarias para integrar estos conocimientos en su aula.",
+      imagen: "/CardsImages/Charlas.webp",
+    },
+    {
+      id: 7,
       titulo: "Conferencias (Virtual/Presencial)",
       descripcion:
-        "Empodera a tus estudiantes con educación financiera. Ofrecemos charlas para que adquieran las herramientas clave para un futuro financiero exitoso. ¡Contáctanos para llevar esta experiencia a tu institución!",
+        "Empodera a tus equipo con educación financiera. Ofrecemos conferencias diseñadas para brindarles herramientas prácticas y esenciales que les permitirán construir un futuro financiero exitoso.",
       imagen: "/CardsImages/VirtualPresencial.webp",
     },
   ];
@@ -96,7 +106,7 @@ const HomePage = () => {
                     <span className="text-Secundario uppercase"> Dinero </span>
                   </motion.p>
 
-                  <Link href={"/QuienesSomos"} className="flex justify-start">
+                  <Link href={"/Nosotros"} className="flex justify-start">
                     <motion.div
                       className="group font-medium tracking-wide select-none text-base relative inline-flex items-center justify-start cursor-pointer sm:h-12 border-2 border-solid py-0 px-6 rounded-md overflow-hidden z-10 transition-all duration-300 ease-in-out outline-0 bg-transparent text-white border-Secundario hover:text-black hover:bg-Tercieario"
                       initial="hidden"
@@ -120,7 +130,7 @@ const HomePage = () => {
       <div className="container  ">
         <div className=" mx-auto grid grid-cols-1 sm:grid-cols-2 sm:gap-2 lg:grid-cols-3 mt-4 px-4 py-8 md:gap-8 rounded-md">
           {Servicios.map((servicio) => (
-            <div key={servicio?.id}>
+            <Link href={"/Servicios"} key={servicio?.id}>
               <Card className="mt-7 w-full mx-auto h-[92%] hover:-translate-y-2 shadow-lg border-2 ">
                 <CardHeader className="h-72 -mt-12 rounded-md overflow-hidden  ">
                   <img
@@ -130,11 +140,15 @@ const HomePage = () => {
                   />
                 </CardHeader>
                 <CardContent>
-                  <h1 className="mb-2 font-semibold">{servicio?.titulo}</h1>
-                  <p className="text-gray-700">{servicio?.descripcion}</p>
+                  <h1 className="mb-2 font-semibold uppercase">
+                    {servicio?.titulo}
+                  </h1>
+                  <p className="text-gray-700 text-justify">
+                    {servicio?.descripcion}
+                  </p>
                 </CardContent>
               </Card>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

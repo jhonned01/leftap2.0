@@ -10,7 +10,7 @@ const Servicios = () => {
     {
       name: "Cursos Digitales",
       description:
-        "Accede a una amplia variedad de cursos digitales que fomentan tu crecimiento personal y profesional. Con una suscripción anual, podrás aprender a tu propio ritmo y aprovechar todos los cursos disponibles con una mínima suscripción. ¡Últimas plazas disponibles! No te pierdas la oportunidad de cambiar tu vida financiera. Incluye un manual, una agenda financiera, una guía para criptomonedas y una guía para invertir en la bolsa.",
+        "Accede a una amplia variedad de cursos digitales sobre finanzas personales que fomentan tu crecimiento personal y profesional. Con una suscripción anual, podrás aprender a tu propio ritmo y aprovechar todos los cursos disponibles con una mínima suscripción. ¡Últimas plazas disponibles! No te pierdas la oportunidad de cambiar tu vida financiera. Incluye un manual, una agenda financiera, una guía para criptomonedas y una guía para invertir en la bolsa.",
     },
     {
       name: "Capacitación y Formación Profesional",
