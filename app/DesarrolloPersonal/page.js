@@ -97,11 +97,13 @@ const DesarrolloPersonal = () => {
           {/* Header Section */}
           <div className="text-center space-y-4">
             <h2 className="text-4xl font-bold tracking-tighter">
-              ENTRENAMIENTO EN TU DESARROLLO PERSONAL Y PROFESIONAL
+              Libera Tu Potencial Financiero, Reprograma tu Mente y Transforma
+              tu Futuro.{" "}
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Con este programa construye tu propio mundo, buscamos reprogramar
-              tu mente y modificar tus patrones y creencias limitantes.
+              Reprograma tu mente, supera creencias limitantes y toma el control
+              de tus finanzas personales. Construye hábitos sólidos para lograr
+              estabilidad económica y alcanzar tus metas con confianza
             </p>
           </div>
 
