@@ -200,10 +200,10 @@ const DesarrolloPersonal = () => {
           {/* Header */}
           <div className="text-center space-y-4">
             <h2 className="text-sm font-semibold tracking-widest uppercase text-primary">
-              Construye tu propio mundo
+              Libérate de deudas y conviértete en inversor{" "}
             </h2>
             <h3 className="text-4xl font-bold tracking-tighter sm:text-5xl">
-              30 Días de Transformación
+              60 Días de Transformación
             </h3>
             <p className="max-w-[42rem] mx-auto text-muted-foreground leading-normal sm:text-lg sm:leading-7">
               Un paso a la vez, como cuando un niño comienza a caminar, así
@@ -217,11 +217,18 @@ const DesarrolloPersonal = () => {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <Card className="group hover:shadow-lg transition-all duration-300">
               <CardHeader>
-                <div className="  w-full h-full mb-4   rounded-t-lg">
-                  <img
-                    src="/MOTIVACION.png"
-                    alt="Motivación"
-                    className="object-fill group-hover:scale-105 h-48 transition-transform duration-300"
+                <div className="relative w-full h-48 mb-4 overflow-hidden rounded-t-lg">
+                  <Image
+                    src="/Motivacion.jpg"
+                    alt="Meditación"
+                    // width={600}
+                    // style={{
+                    //   objectFit: "cover",
+                    //   objectPosition: "bottom",
+                    // }}
+                    // height={200}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <CardTitle className="flex items-center gap-2">
@@ -242,10 +249,14 @@ const DesarrolloPersonal = () => {
               <CardHeader>
                 <div className="relative w-full h-48 mb-4 overflow-hidden rounded-t-lg">
                   <Image
-                    src="/placeholder.svg?height=400&width=600"
+                    src="/Apollo.jpg"
                     alt="Meditación"
-                    width={600}
-                    height={400}
+                    // width={600}
+                    // height={400}
+                    fill
+                    // style={{
+                    //   objectFit: "cover",
+                    // }}
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
@@ -268,12 +279,11 @@ const DesarrolloPersonal = () => {
               <CardHeader>
                 <div className="relative w-full h-48 mb-4 overflow-hidden rounded-t-lg">
                   <Image
-                    src="/PLAYA.png"
+                    src="/Proyeccion.jpg"
                     alt="Proyección"
-                    width={600}
-                    height={400}
+                    fill
                     style={{
-                      objectFit: "fill",
+                      objectFit: "cover",
                     }}
                     className=" group-hover:scale-105 transition-transform duration-300"
                   />
@@ -296,12 +306,17 @@ const DesarrolloPersonal = () => {
 
           {/* CTA Section */}
           <div className="text-center">
-            <Link href={"/QuienesSomos"} className="flex justify-center">
+            <a
+              href="https://hotmart.com/es/marketplace/productos/curso-tomando-el-control-de-mis-finanzas/F94967119T"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex justify-center"
+            >
               <Button size="lg" className="group">
                 Quiero el entrenamiento
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
-            </Link>
+            </a>
             <p className="mt-4 text-sm text-muted-foreground">
               Este entrenamiento cuenta con 4 secciones en vivo, más un
               acompañamiento continuo de 30 días para profundizar en tu ser y no

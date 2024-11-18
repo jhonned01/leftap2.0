@@ -41,7 +41,7 @@ const HomePage = () => {
       titulo: "¡Transforma tu vida!",
       descripcion:
         "Impulsa tu crecimiento con nuestras capacitaciones en desarrollo personal, respaldadas por libros y manuales especializados en finanzas personales. fortaleces tus habilidades para alcanzar una vida plena y financieramente estable.",
-      imagen: "/CardsImages/Finanzas.jpg",
+      imagen: "/CardsImages/Books.jpg",
     },
     {
       id: 5,
