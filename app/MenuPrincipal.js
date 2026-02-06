@@ -25,9 +25,9 @@ const MenuPrincipal = () => {
       const isElementVisible = window.scrollY > 40;
 
       if (isElementVisible) {
-        setScrollBg("bg-white/20 backdrop-blur-md  text-black");
+        setScrollBg("bg-white shadow-md text-gray-900");
       } else {
-        setScrollBg("   lg:bg-transparent text-white");
+        setScrollBg("lg:bg-transparent text-white");
       }
     };
 
@@ -46,8 +46,7 @@ const MenuPrincipal = () => {
   return (
     <>
       <nav
-        style={{ filter: "drop-shadow(0px 0px 3px black)" }}
-        className={`sticky z-50 top-0 p-2 md:px-10 shadow-sm md:flex md:items-center md:justify-between  text-white   ${scrollBg}  `}
+        className={`sticky z-50 top-0 p-2 md:px-10 md:flex md:items-center md:justify-between transition-all duration-300 ${scrollBg}`}
       >
         <div className="flex justify-between items-center   ">
           {/* Escudo Logo "inicio" */}
@@ -63,7 +62,7 @@ const MenuPrincipal = () => {
           <span className="text-3xl cursor-pointer mx-2 md:hidden block ">
             <button name="Menu" onClick={() => setIsOpen(!isOpen)}>
               <svg
-                className="h-10 w-10 text-white"
+                className="h-10 w-10"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -121,13 +120,13 @@ const MenuPrincipal = () => {
             >
               Blog
             </ItemMenu>
-            <ItemMenu
+            {/* <ItemMenu
               ruta="/DesarrolloPersonal"
               setIsOpen={setIsOpen}
               border={pathname == "/DesarrolloPersonal" ? true : false}
             >
               Desarrollo Personal
-            </ItemMenu>
+            </ItemMenu> */}
 
             {/* <div className="hidden lg:block">
               <NegoGarden />
@@ -136,9 +135,7 @@ const MenuPrincipal = () => {
         </motion.div>
         <div className="hidden lg:flex justify-center items-center gap-x-4">
           <Link href="/Contacto">
-            <Button
-              className={` uppercase hover:bg-white hover:text-black text-white`}
-            >
+            <Button className="uppercase bg-emerald-600 hover:bg-emerald-700 text-white">
               Contacto
             </Button>
           </Link>
