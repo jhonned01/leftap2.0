@@ -149,18 +149,18 @@ const secciones = [
     borderColor: "border-blue-200",
     iconColor: "text-blue-600",
   },
-  {
-    title: "Desarrollo Personal",
-    description:
-      "Entrenamiento de 30 y 60 días para reprogramar tu mente, superar creencias limitantes y transformar tus finanzas.",
-    icon: Brain,
-    href: "/DesarrolloPersonal",
-    cta: "Ver entrenamiento",
-    gradient: "from-violet-500 to-purple-600",
-    bgLight: "bg-violet-50",
-    borderColor: "border-violet-200",
-    iconColor: "text-violet-600",
-  },
+  // {
+  //   title: "Desarrollo Personal",
+  //   description:
+  //     "Entrenamiento de 30 y 60 días para reprogramar tu mente, superar creencias limitantes y transformar tus finanzas.",
+  //   icon: Brain,
+  //   href: "/DesarrolloPersonal",
+  //   cta: "Ver entrenamiento",
+  //   gradient: "from-violet-500 to-purple-600",
+  //   bgLight: "bg-violet-50",
+  //   borderColor: "border-violet-200",
+  //   iconColor: "text-violet-600",
+  // },
   {
     title: "Blog LEFTAP",
     description:
