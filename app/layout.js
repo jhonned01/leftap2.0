@@ -6,9 +6,61 @@ import Footer from "./Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Leftap",
+  metadataBase: new URL("https://www.leftap.org"),
+  title: {
+    default: "LEFTAP | Centro de Formación en Educación Financiera",
+    template: "%s | LEFTAP",
+  },
   description:
-    "¡Bienvenido a nuestra página web de aprendizaje financiero! Aquí encontrarás contenido educativo actualizado y fácil de entender sobre finanzas personales, inversión, presupuesto y ahorro. Nuestra plataforma se adapta a tus necesidades, ya sea que estés comenzando desde cero o buscando expandir tus conocimientos existentes. Navega por nuestra intuitiva página web y comienza tu camino hacia la independencia financiera hoy mismo.",
+    "LEFTAP acompaña a jóvenes, familias, instituciones educativas y organismos públicos a integrar educación financiera real, consciente y responsable. Más de 19 años formando criterio financiero.",
+  keywords: [
+    "educación financiera",
+    "formación financiera",
+    "finanzas personales",
+    "LEFTAP",
+    "educación financiera Argentina",
+    "finanzas para jóvenes",
+    "talleres financieros",
+    "sistema PASO",
+    "educación financiera Tucumán",
+  ],
+  authors: [{ name: "LEFTAP", url: "https://www.leftap.org" }],
+  creator: "LEFTAP",
+  openGraph: {
+    type: "website",
+    locale: "es_AR",
+    url: "https://www.leftap.org",
+    siteName: "LEFTAP",
+    title: "LEFTAP | Centro de Formación en Educación Financiera",
+    description:
+      "Educación financiera aplicada para formar personas que tomen buenas decisiones económicas. Programas para jóvenes, familias e instituciones.",
+    images: [
+      {
+        url: "/NuevasImagenes/GrupoEstudiantes.jpg",
+        width: 1200,
+        height: 630,
+        alt: "LEFTAP - Centro de Formación Financiera",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "LEFTAP | Centro de Formación en Educación Financiera",
+    description:
+      "Educación financiera aplicada para formar personas que tomen buenas decisiones económicas.",
+    images: ["/NuevasImagenes/GrupoEstudiantes.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  alternates: {
+    canonical: "https://www.leftap.org",
+  },
 };
 
 export default function RootLayout({ children }) {

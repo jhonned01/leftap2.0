@@ -241,7 +241,7 @@ const HomePage = () => {
   const highlightWords = ["decidir", "mejor", "próspero", "futuro"];
 
   return (
-    <div className="-mt-[72px] md:-mt-[98.55px]">
+    <div className="-mt-25 md:-mt-[98.55px]">
       {/* =========================================
           HERO
           ========================================= */}
@@ -253,7 +253,7 @@ const HomePage = () => {
             className="h-full w-full object-cover"
             alt="Hero background"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-emerald-900/40" />
+          <div className="absolute inset-0 bg-linear-to-br from-black/70 via-black/50 to-emerald-900/40" />
         </div>
 
         {/* Floating orbs */}

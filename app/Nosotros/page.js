@@ -130,7 +130,7 @@ const pilares = [
 
 const NosotrosPage = () => {
   return (
-    <div className="-mt-[72px] md:-mt-[98.55px]">
+    <div className="-mt-25 md:mt-0">
       {/* =========================================
           HERO
           ========================================= */}
@@ -155,7 +155,12 @@ const NosotrosPage = () => {
           <motion.div
             className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"
             animate={{ scale: [1, 1.3, 1], y: [0, 30, 0] }}
-            transition={{ repeat: Infinity, duration: 10, ease: "easeInOut", delay: 2 }}
+            transition={{
+              repeat: Infinity,
+              duration: 10,
+              ease: "easeInOut",
+              delay: 2,
+            }}
           />
         </div>
 
@@ -218,10 +223,7 @@ const NosotrosPage = () => {
               variants={stagger}
             >
               {/* Image */}
-              <motion.div
-                className="lg:col-span-5"
-                variants={fadeInLeft}
-              >
+              <motion.div className="lg:col-span-5" variants={fadeInLeft}>
                 <div className="relative">
                   {/* Decorative background */}
                   <div className="absolute -top-4 -left-4 w-full h-full bg-gradient-to-br from-emerald-200 to-teal-200 rounded-3xl" />
@@ -250,7 +252,9 @@ const NosotrosPage = () => {
                       </div>
                       <div>
                         <p className="text-2xl font-black text-gray-900">+19</p>
-                        <p className="text-xs text-gray-500 font-medium">Años de experiencia</p>
+                        <p className="text-xs text-gray-500 font-medium">
+                          Años de experiencia
+                        </p>
                       </div>
                     </div>
                   </motion.div>
@@ -450,7 +454,12 @@ const NosotrosPage = () => {
         <motion.div
           className="absolute bottom-0 right-1/4 w-64 h-64 bg-teal-500/20 rounded-full blur-3xl"
           animate={{ scale: [1, 1.3, 1], x: [0, 30, 0] }}
-          transition={{ repeat: Infinity, duration: 6, ease: "easeInOut", delay: 1 }}
+          transition={{
+            repeat: Infinity,
+            duration: 6,
+            ease: "easeInOut",
+            delay: 1,
+          }}
         />
 
         <div className="relative z-10 container mx-auto px-4 text-center">
@@ -466,17 +475,15 @@ const NosotrosPage = () => {
               className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-6"
             >
               Conocé cómo LEFTAP puede{" "}
-              <span className="text-emerald-400">
-                acompañarte
-              </span>
-              .
+              <span className="text-emerald-400">acompañarte</span>.
             </motion.h2>
 
             <motion.p
               variants={fadeInUp}
               className="text-lg text-white/70 mb-10"
             >
-              Educación financiera para tu familia, tu institución o tu comunidad.
+              Educación financiera para tu familia, tu institución o tu
+              comunidad.
             </motion.p>
 
             <motion.div

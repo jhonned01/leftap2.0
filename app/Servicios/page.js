@@ -74,8 +74,7 @@ const pasoSteps = [
     title: "PENSÁ",
     emoji: "🧠",
     tagline: "Antes de hablar de dinero, hablamos de vida.",
-    subtitle:
-      "Definir objetivos, prioridades y metas personales.",
+    subtitle: "Definir objetivos, prioridades y metas personales.",
     bullets: [
       "Definir qué quieren lograr",
       "Entender para qué sirve el dinero",
@@ -116,8 +115,7 @@ const pasoSteps = [
     title: "SIMULÁ",
     emoji: "🧩",
     tagline: "Antes de arriesgar, se piensa.",
-    subtitle:
-      "Evaluar escenarios posibles antes de tomar decisiones reales.",
+    subtitle: "Evaluar escenarios posibles antes de tomar decisiones reales.",
     bullets: [
       "Simulan escenarios reales",
       "Evalúan qué pasaría si empiezan hoy o si no empiezan",
@@ -137,8 +135,7 @@ const pasoSteps = [
     title: "OPERÁ",
     emoji: "🧱",
     tagline: "Dar el primer paso, pero con criterio.",
-    subtitle:
-      "Dar pasos concretos con criterio, conciencia y responsabilidad.",
+    subtitle: "Dar pasos concretos con criterio, conciencia y responsabilidad.",
     bullets: [
       "Dónde empezar según su perfil",
       "Cómo construir un portafolio simple",
@@ -222,10 +219,7 @@ function PasoCard({ step, index }) {
   const isEven = index % 2 === 0;
 
   return (
-    <motion.div
-      variants={fadeInUp}
-      className="relative"
-    >
+    <motion.div variants={fadeInUp} className="relative">
       {/* Timeline connector (desktop) */}
       {index < pasoSteps.length - 1 && (
         <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-full w-0.5 h-16 bg-gradient-to-b from-gray-300 to-transparent z-0" />
@@ -238,10 +232,16 @@ function PasoCard({ step, index }) {
         {/* Top gradient bar */}
         <div className={`h-1.5 bg-gradient-to-r ${step.gradient}`} />
 
-        <div className={`p-6 sm:p-8 lg:p-10 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-start`}>
+        <div
+          className={`p-6 sm:p-8 lg:p-10 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-start`}
+        >
           {/* Letter + Icon block */}
-          <div className={`lg:col-span-3 flex flex-col items-center text-center ${isEven ? "" : "lg:order-last"}`}>
-            <div className={`relative w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-gradient-to-br ${step.gradient} flex items-center justify-center mb-4 shadow-lg`}>
+          <div
+            className={`lg:col-span-3 flex flex-col items-center text-center ${isEven ? "" : "lg:order-last"}`}
+          >
+            <div
+              className={`relative w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-linear-to-br ${step.gradient} flex items-center justify-center mb-4 shadow-lg`}
+            >
               <span className="text-4xl sm:text-5xl font-black text-white">
                 {step.letter}
               </span>
@@ -249,7 +249,9 @@ function PasoCard({ step, index }) {
                 <Icon className={`w-5 h-5 ${step.iconColor}`} />
               </div>
             </div>
-            <h3 className={`text-2xl sm:text-3xl font-black ${step.accentColor} tracking-wide`}>
+            <h3
+              className={`text-2xl sm:text-3xl font-black ${step.accentColor} tracking-wide`}
+            >
               {step.title}
             </h3>
             <p className="text-2xl mt-1">{step.emoji}</p>
@@ -278,7 +280,9 @@ function PasoCard({ step, index }) {
                   transition={{ delay: i * 0.1, duration: 0.4 }}
                   className="flex items-start gap-3"
                 >
-                  <div className={`flex-shrink-0 w-8 h-8 ${step.bgLight} rounded-lg flex items-center justify-center mt-0.5`}>
+                  <div
+                    className={`flex-shrink-0 w-8 h-8 ${step.bgLight} rounded-lg flex items-center justify-center mt-0.5`}
+                  >
                     <CheckCircle2 className={`w-4 h-4 ${step.iconColor}`} />
                   </div>
                   <p className="text-gray-700 text-base sm:text-lg">{bullet}</p>
@@ -287,8 +291,12 @@ function PasoCard({ step, index }) {
             </div>
 
             {/* Key quote */}
-            <div className={`border-l-4 ${step.borderColor} ${step.bgLight} rounded-r-xl px-5 py-4`}>
-              <p className={`font-bold text-base sm:text-lg ${step.accentColor} flex items-center gap-2`}>
+            <div
+              className={`border-l-4 ${step.borderColor} ${step.bgLight} rounded-r-xl px-5 py-4`}
+            >
+              <p
+                className={`font-bold text-base sm:text-lg ${step.accentColor} flex items-center gap-2`}
+              >
                 <ArrowRight className="w-4 h-4 flex-shrink-0" />
                 {step.quote}
               </p>
@@ -318,19 +326,17 @@ function SegmentCard({ seg, index }) {
 
       <div className="p-6 sm:p-8 flex flex-col flex-1">
         {/* Icon */}
-        <div className={`w-16 h-16 ${seg.bgLight} rounded-2xl flex items-center justify-center mb-6`}>
+        <div
+          className={`w-16 h-16 ${seg.bgLight} rounded-2xl flex items-center justify-center mb-6`}
+        >
           <Icon className={`w-8 h-8 ${seg.iconColor}`} />
         </div>
 
         {/* Title */}
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">
-          {seg.title}
-        </h3>
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">{seg.title}</h3>
 
         {/* Description */}
-        <p className="text-gray-600 leading-relaxed mb-4">
-          {seg.description}
-        </p>
+        <p className="text-gray-600 leading-relaxed mb-4">{seg.description}</p>
 
         {/* Detail or highlights */}
         {seg.detail && (
@@ -343,7 +349,9 @@ function SegmentCard({ seg, index }) {
           <div className="space-y-2 mb-6">
             {seg.highlights.map((item, i) => (
               <div key={i} className="flex items-start gap-2">
-                <CheckCircle2 className={`w-4 h-4 ${seg.iconColor} mt-1 flex-shrink-0`} />
+                <CheckCircle2
+                  className={`w-4 h-4 ${seg.iconColor} mt-1 flex-shrink-0`}
+                />
                 <p className="text-gray-600 text-sm">{item}</p>
               </div>
             ))}
@@ -374,7 +382,7 @@ function SegmentCard({ seg, index }) {
 
 const ServiciosPage = () => {
   return (
-    <div className="-mt-[72px] md:-mt-[98.55px]">
+    <div className="mt-25 md:mt-0">
       {/* =========================================
           HERO
           ========================================= */}
@@ -386,7 +394,7 @@ const ServiciosPage = () => {
             className="h-full w-full object-cover"
             alt="Estudiantes en clase"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-emerald-900/40" />
+          <div className="absolute inset-0 bg-linear-to-br from-black/70 via-black/50 to-emerald-900/40" />
         </div>
 
         {/* Floating orbs */}
@@ -399,7 +407,12 @@ const ServiciosPage = () => {
           <motion.div
             className="absolute bottom-1/3 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"
             animate={{ scale: [1, 1.3, 1], x: [0, -40, 0] }}
-            transition={{ repeat: Infinity, duration: 10, ease: "easeInOut", delay: 2 }}
+            transition={{
+              repeat: Infinity,
+              duration: 10,
+              ease: "easeInOut",
+              delay: 2,
+            }}
           />
         </div>
 
@@ -434,8 +447,8 @@ const ServiciosPage = () => {
             transition={{ duration: 0.8, delay: 0.7 }}
           >
             Todos los programas de LEFTAP se basan en el Sistema P.A.S.O., una
-            metodología educativa que ordena el aprendizaje financiero y evita la
-            improvisación.
+            metodología educativa que ordena el aprendizaje financiero y evita
+            la improvisación.
           </motion.p>
 
           <motion.div
@@ -498,7 +511,8 @@ const ServiciosPage = () => {
               className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed"
             >
               Una metodología educativa propia que ordena el aprendizaje
-              financiero paso a paso, con fundamento pedagógico y aplicación real.
+              financiero paso a paso, con fundamento pedagógico y aplicación
+              real.
             </motion.p>
           </motion.div>
 
@@ -614,7 +628,7 @@ const ServiciosPage = () => {
           CTA FINAL
           ========================================= */}
       <section className="relative py-24 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-emerald-900 to-gray-900" />
+        <div className="absolute inset-0 bg-linear-to-br from-gray-900 via-emerald-900 to-gray-900" />
 
         {/* Animated orbs */}
         <motion.div
@@ -625,7 +639,12 @@ const ServiciosPage = () => {
         <motion.div
           className="absolute bottom-0 right-1/4 w-64 h-64 bg-teal-500/20 rounded-full blur-3xl"
           animate={{ scale: [1, 1.3, 1], x: [0, 30, 0] }}
-          transition={{ repeat: Infinity, duration: 6, ease: "easeInOut", delay: 1 }}
+          transition={{
+            repeat: Infinity,
+            duration: 6,
+            ease: "easeInOut",
+            delay: 1,
+          }}
         />
 
         <div className="relative z-10 container mx-auto px-4 text-center">
@@ -648,14 +667,19 @@ const ServiciosPage = () => {
               variants={fadeInUp}
               className="text-lg text-white/70 mb-10"
             >
-              Sumá educación financiera a tu comunidad, tu institución o tu hogar.
+              Sumá educación financiera a tu comunidad, tu institución o tu
+              hogar.
             </motion.p>
 
             <motion.div variants={fadeInUp} className="relative inline-block">
               <motion.div
                 className="absolute inset-0 rounded-full bg-emerald-500/20"
                 animate={{ scale: [1, 1.4, 1], opacity: [0.4, 0, 0.4] }}
-                transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 2.5,
+                  ease: "easeInOut",
+                }}
               />
               <Link href="/Contacto">
                 <Button
